@@ -24,7 +24,7 @@
     var menu_experiment; 
     var is_ephemeral = false;
     var SEQ_LENGTH = 126;
-    var log = [];
+    var log = [["Timestamp", "Trial Number", "Action Type (Prompt, Menu, Item)"]];
 
     // Creates HTML for pre questionnaire.
     function pre_questionnaire() {
@@ -330,7 +330,7 @@
 
         this.post_questionnaire = function() {
             $(".container").hide();
-            var form = "<h2>Thank you for taking the time to perform my experiment! The post-questionnaire below is the last thing you will need to fill out.</h2><iframe src='https://docs.google.com/forms/d/1AMrMT3--N6NsMWUdJh_Dp1QcytJtEBle_0Wf9sPsHUg/viewform?embedded=true' width='760' height='500' frameborder='0' marginheight='0' marginwidth='0'>Loading...</iframe><div class='button' id='download'>Data</div>";
+            var form = "<h2>Thank you for taking the time to perform my experiment! The post-questionnaire below is the last thing you will need to fill out. Submit the post-questionnaire, then click the Download Data button to download the file.</h2><iframe src='https://docs.google.com/forms/d/1AMrMT3--N6NsMWUdJh_Dp1QcytJtEBle_0Wf9sPsHUg/viewform?embedded=true' width='760' height='500' frameborder='0' marginheight='0' marginwidth='0'>Loading...</iframe><div class='button' id='download'>Download Data</div>";
 
             $(".user-questions").html(form);
             $(".user-questions").show();
