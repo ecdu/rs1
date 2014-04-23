@@ -140,19 +140,13 @@
         return permuted_tasks;
     }
 
-    function ControlExperiment(is_practice) {
-        this.practice = is_practice;
-        //this.practice_menus;
-        //this.practice_tasks;
+    function ControlExperiment() {
         this.menus;
         this.tasks;
         this.random_sequences;
         this.current_index = 0;
 
         this.run = function () {
-            // Generate practice and real run
-            //var practice_groups = select_random(12, 72);
-            //this.practice_menus = populate_menus(practice_groups);
             var groups = select_random(12, 72);
             this.menus = populate_menus(groups);
             
@@ -351,7 +345,7 @@
 
 
     $(document).ready(function() {
-        var control_experiment = new ControlExperiment(false);
+        var control_experiment = new ControlExperiment();
         control_experiment.run();
 
 
