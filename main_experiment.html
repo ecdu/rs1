@@ -161,6 +161,9 @@
 
         this.next = function() {
             if (this.has_tasks()) {
+                if ((this.current_index%42 == 0) && (this.current_index < 126) && (this.current_index > 0)) {
+                    alert("Great job so far! Time for a quick break. Click ok when you're ready to continue.");
+                }
                 current_menu = this.tasks[this.current_index][0];
                 current_item = this.tasks[this.current_index][1];
 
@@ -297,6 +300,10 @@
 
         this.next = function() {
             if (this.has_tasks()) {
+                if ((this.current_index%42 == 0) && (this.current_index < 126) && (this.current_index > 0)) {
+                    alert("Great job so far! Time for a quick break. Click ok when you're ready to continue.");
+                }
+                
                 current_menu = this.tasks[this.current_index][0];
                 current_item = this.tasks[this.current_index][1];
 
