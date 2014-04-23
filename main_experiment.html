@@ -162,9 +162,6 @@
         }
 
         this.has_tasks = function() {
-            if (is_practice) {
-                return this.current_index != 8;
-            }
             return this.current_index != SEQ_LENGTH;
         }
 
